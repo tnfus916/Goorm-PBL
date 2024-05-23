@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poetsen One', sans-serif;
+  font-style: normal;
+}
+
+@media screen and (max-width: 38rem) {
+  .app {
+    display: none;
+  }
+}
+
+button {
+  background: whitesmoke;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+body {
+  background-color: rgb(176, 173, 201);
+  color: #fff;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.app {
+  width: 100%;
+  max-width: 768px;
+}
+
+.app header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.app header h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.app header button {
+  color: rgb(176, 173, 201);
+  font-size: 18px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 1rem;
+}
+
+.todobox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: rgb(211, 213, 219);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.todobox:last-of-type {
+  margin-bottom: 0;
+}
+
+.todobox input[type='checkbox'] {
+  margin-right: 1rem;
+}
+
+.todobox input[type='text'] {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: regular;
+  color: black;
+  font-size: 20px;
+  flex: 1 1 0%;
+  margin-right: 1rem;
+}
+
+.todobox input[type='text']:not(:disabled) {
+  border-bottom: 2px solid #fff;
+}
+
+.todobox input[type='text']:disabled {
+  border-bottom: none;
+}
+
+.todobox.checked {
+  opacity: 0.9;
+}
+
+.todobox.checked input[type='text'] {
+  text-decoration: line-through;
+  color: rgb(36, 36, 36);
+}
+
+.todobox:hover,
+.todobox:focus-within {
+  outline: 2px solid #fff;
+}
+
+.actions button {
+  color: rgb(29, 29, 29);
+  margin-right: 1rem;
+  opacity: 0.8;
+  transform: 0.1s;
+}
+
+.actions button.remove-btn {
+  color: rgb(31, 27, 28);
+}
+
+.actions button:hover {
+  opacity: 1;
+}
+
+.actions button:last-of-type {
+  margin-right: 0;
+}
