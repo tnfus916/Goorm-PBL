@@ -1,0 +1,69 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 4rem;
+  background: #ddeeb6;
+  color: rgb(86, 83, 83);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+}
+
+#export-btn {
+  background: #a3bfe3;
+  color: rgb(57, 57, 57);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  display: inline-block;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+#cell-status-bar {
+  width: 100vw;
+  height: 1rem;
+  background-color: white;
+  padding: 0.2rem;
+  border: 1px solid lightgray;
+  border-radius: 0.2rem;
+  position: fixed;
+  top: 6rem;
+}
+
+#spreadsheet-container {
+  margin-top: 7.5rem;
+}
+
+.cell-row {
+  display: flex;
+}
+
+.cell {
+  width: 80px;
+  border: 0.01rem solid lightgray;
+  height: 40px;
+  outline: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.cell.header {
+  text-align: center;
+  background: #ebeaea;
+}
+
+.cell.header.active {
+  background: #c8df96;
+  color: rgb(67, 67, 67);
+}
